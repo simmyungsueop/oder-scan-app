@@ -114,9 +114,11 @@ def call_gemini_api_fast(image, prompt):
     
     optimized_img = prepare_image_for_analysis(image)
     
+    # 올바른 Gemini 모델명 목록으로 수정
     candidate_models = [
-        "gemini-3.8-flash",
-        "gemini-2.5-flash"
+        "gemini-1.5-flash",
+        "gemini-1.5-pro",
+        "gemini-2.0-flash-exp"
     ]
     
     last_error = None
@@ -143,7 +145,6 @@ def call_gemini_api_fast(image, prompt):
                 break
 
     return None, f"❌ API 호출 중 오류가 발생했습니다: {last_error}"
-
 # ---------------------------------------------------------
 # 4. 메인 UI 레이아웃
 # ---------------------------------------------------------
