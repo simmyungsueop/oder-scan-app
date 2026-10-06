@@ -114,11 +114,10 @@ def call_gemini_api_fast(image, prompt):
     
     optimized_img = prepare_image_for_analysis(image)
     
-    # 올바른 Gemini 모델명 목록으로 수정
-    candidate_models = [
-        "gemini-1.5-flash",
-        "gemini-1.5-pro",
-        "gemini-2.0-flash-exp"
+    # 올바른 Gemini 모델명 목록으로 수
+      candidate_models = [
+        "gemini-2.5-flash",
+        "gemini-1.5-flash"
     ]
     
     last_error = None
